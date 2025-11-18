@@ -29,7 +29,11 @@ function App(){
                 </Routes>
               </main>
 
+<<<<<<< HEAD
               {/* <CATS /> */}
+=======
+              <CATS />
+>>>>>>> ec3f74237a3579ae35ef05d12f2049522a134ec3
 
               
               
