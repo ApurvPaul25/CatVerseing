@@ -12,6 +12,14 @@ import Incdec from "./pages/incdec"
 import { CATS } from "../../Components/Server/server"
 
 
+const Cats = lazy(()=> import("./pages"))
+const Breeds = lazy(()=> import("./pages/Breeds"))
+const LocalCats = lazy(()=> import("./pages/Localcats"))
+const WildCats = lazy(()=> import("./pages/Breeds"))
+const News = lazy(()=> import("./pages/Breeds"))
+
+
+
 function App(){
   return(
     <BrowserRouter>
@@ -20,22 +28,16 @@ function App(){
             <Navbar />
 
               <main className="flex-grow">
-                <Routes>
-                  <Route path="/cats" element={<Cats />}/>
-                  <Route path="/breeds" element={<Breeds />}/>
-                  <Route path="/localcats" element={<LocalCats />}/>
-                  <Route path="/wildcats" element={<WildCats />}/>
-                  <Route path="/news" element={<News />}/>
-                </Routes>
+                <Suspense fallback={<div className="text-center p-10">Loading...</div>}>
+                  <Routes>
+                    <Route path="/cats" element={<Cats />}/>
+                    <Route path="/breeds" element={<Breeds />}/>
+                    <Route path="/localcats" element={<LocalCats />}/>
+                    <Route path="/wildcats" element={<WildCats />}/>
+                    <Route path="/news" element={<News />}/>
+                  </Routes>
+                </Suspense>
               </main>
-
-<<<<<<< HEAD
-              {/* <CATS /> */}
-=======
-              <CATS />
->>>>>>> ec3f74237a3579ae35ef05d12f2049522a134ec3
-
-              
               
             {/* <Incdec /> use useDispatch and useSelector inside the cats, breeds, footer, Navbar files also works*/}
 
