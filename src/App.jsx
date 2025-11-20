@@ -1,22 +1,18 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Navbar from "./components/Navbar"
-import Cats from "./pages/Cats"
-import Breeds from "./pages/Breeds"
-import LocalCats from "./pages/Localcats"
-import WildCats from "./pages/WildCats"
-import News from "./pages/News"
 import Footer from "./components/Footer"
 import { Provider } from "react-redux"
 import { store } from "./redux/store"
 import Incdec from "./pages/incdec"
 import { CATS } from "../../Components/Server/server"
+import { lazy, Suspense } from "react"
 
 
-const Cats = lazy(()=> import("./pages"))
+const Cats = lazy(()=> import("./pages/Cats"))
 const Breeds = lazy(()=> import("./pages/Breeds"))
 const LocalCats = lazy(()=> import("./pages/Localcats"))
-const WildCats = lazy(()=> import("./pages/Breeds"))
-const News = lazy(()=> import("./pages/Breeds"))
+const WildCats = lazy(()=> import("./pages/WildCats"))
+const News = lazy(()=> import("./pages/News"))
 
 
 
@@ -30,6 +26,7 @@ function App(){
               <main className="flex-grow">
                 <Suspense fallback={<div className="text-center p-10">Loading...</div>}>
                   <Routes>
+                    <Route path="/" element={<Cats />}/>
                     <Route path="/cats" element={<Cats />}/>
                     <Route path="/breeds" element={<Breeds />}/>
                     <Route path="/localcats" element={<LocalCats />}/>
