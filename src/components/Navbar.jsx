@@ -19,6 +19,7 @@ export default function Navbar(){
                 <li onClick={()=>setMenu("/localcats")}><Link to = "/localcats">Local{menu==="/localcats" ? <hr/>:<></>}</Link></li>
                 <li onClick={()=>setMenu("/wildcats")}><Link to = "/wildcats">Wild{menu==="/wildcats" ? <hr/>:<></>}</Link></li>
                 <li onClick={()=>setMenu("/news")}><Link to = "/news">News{menu==="/news" ? <hr/>:<></>}</Link></li>
+                <li onClick={()=>setMenu("/rough")}><Link to = "/rough">Rough{menu==="/rough" ? <hr/>:<></>}</Link></li>
             </ul>
         </nav>
     )

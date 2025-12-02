@@ -8,6 +8,7 @@ import { CATS } from "../../Components/Server/server"
 import { lazy, Suspense } from "react"
 
 
+const Rough =  lazy(()=> import("./pages/rough"))
 const Cats = lazy(()=> import("./pages/Cats"))
 const Breeds = lazy(()=> import("./pages/Breeds"))
 const LocalCats = lazy(()=> import("./pages/Localcats"))
@@ -26,12 +27,17 @@ function App(){
               <main className="flex-grow">
                 <Suspense fallback={<div className="text-center p-10">Loading...</div>}>
                   <Routes>
-                    <Route path="/" element={<Cats />}/>
+                    
+                    {/* <Route path="/" element={<Cats />}/>
                     <Route path="/cats" element={<Cats />}/>
+
                     <Route path="/breeds" element={<Breeds />}/>
                     <Route path="/localcats" element={<LocalCats />}/>
                     <Route path="/wildcats" element={<WildCats />}/>
-                    <Route path="/news" element={<News />}/>
+                    <Route path="/news" element={<News />}/> */}
+                    <Route path="/" element={<Rough />}/>
+                    <Route path="/rough" element={<Rough />}/>
+                    
                   </Routes>
                 </Suspense>
               </main>
