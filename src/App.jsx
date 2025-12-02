@@ -4,7 +4,7 @@ import Footer from "./components/Footer"
 import { Provider } from "react-redux"
 import { store } from "./redux/store"
 import Incdec from "./pages/incdec"
-import { CATS } from "../../Components/Server/server"
+// import { CATS } from "../../Components/Server/server"
 import { lazy, Suspense } from "react"
 
 
