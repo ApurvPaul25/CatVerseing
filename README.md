@@ -1,6 +1,6 @@
 # CatVerseing
 
-Live Demo: [Visit Here](https://catverse-guzchywyn-kaydens-projects-61c497ce.vercel.app)  
+Live Demo: https://catverse.vercel.app/
 Connect with me on [LinkedIn](www.linkedin.com/in/apurva-paul-1402851b3)
 
 # React + Vite
