@@ -1,15 +1,16 @@
-/* Navbar container */
+
 .navbar {
   display: flex;
-  justify-content: space-between;  /* Logo left, links right */
-  align-items: center;             /* Vertical alignment */
-  background-color: #4b0082;       /* Indigo */
-  color: white;
+  justify-content: space-between;  
+  align-items: center;             
+  background-color: teal;       
+  color: rgb(0, 52, 52);
   padding: 0.5rem 1rem;
 }
 
-/* Logo */
+
 .navbar .logo {
+  color: rgb(0, 52, 52);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +20,7 @@
 }
 
 .navbar .logo:hover {
-  color: #fa7c15;
+  color: white;
 }
 
 @keyframes giggle {
@@ -29,7 +30,7 @@
   }
   50% {
     rotate: 10deg;
-    scale: 1.1; /* looks like font-weight increased */
+    scale: 1.1; 
   }
   100% {
     rotate: -10deg;
@@ -46,6 +47,9 @@
   }
 }
 
+
+
+
 .navbar .logo .logoicon{
   transition: rotate 0.5s ease;
 }
@@ -54,45 +58,43 @@
   animation: giggle 0.6s ease-in-out infinite alternate;
 }
 
-/* Nav links container */
-.navbar ul {
-  font-size: smaller;
+.navbar ul{
   display: flex;
-  align-items: center;             
-  list-style: none;
-  gap: 1.5rem;             
-  margin: 5px;
-  padding: 5px;
+  flex-direction: row;
 }
 
+.navbar ul li {
+  display: flex;
+  flex-direction: row;
+  padding: 0 .5rem 0 .5rem ;
+}
 
-.navbar ul li a {
-  color: white;
+.nav-link {
+  color: rgb(0, 52, 52);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-weight: 300;
-  transition: color 0.3s ease transform 1s ease;
-  cursor: pointer;
-  transition-delay: 0s;
 }
 
-.navbar ul li a:hover {
-  color: #facc15;
-  font-weight: 500;
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link.active {
+  color: white;  
   transform: scale(1.05);
-  transition-delay: 0.5s;
 }
 
-.navbar ul li a:active{
-  color: #facc15;
-  font-weight: 500;
-  transform: scale(0.95);
-  transition: transform 0.1s ease;
-
+hr {
+  width: 100%;
+  border: none;
+  border-top: 2px solid white;
+  
 }
+
+
 
 /* Responsive for smaller screens */
 @media (max-width: 600px) {

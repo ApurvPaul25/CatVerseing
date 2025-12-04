@@ -14,7 +14,7 @@ const Breeds = lazy(()=> import("./pages/Breeds"))
 const LocalCats = lazy(()=> import("./pages/Localcats"))
 const WildCats = lazy(()=> import("./pages/WildCats"))
 const News = lazy(()=> import("./pages/News"))
-
+const AuthForm = lazy(()=> import("./backend/AuthForm"))
 
 
 function App(){
@@ -28,15 +28,19 @@ function App(){
                 <Suspense fallback={<div className="text-center p-10">Loading...</div>}>
                   <Routes>
                     
-                    {/* <Route path="/" element={<Cats />}/>
+                    <Route path="/" element={<Cats />}/>
                     <Route path="/cats" element={<Cats />}/>
 
                     <Route path="/breeds" element={<Breeds />}/>
                     <Route path="/localcats" element={<LocalCats />}/>
                     <Route path="/wildcats" element={<WildCats />}/>
-                    <Route path="/news" element={<News />}/> */}
-                    <Route path="/" element={<Rough />}/>
+                    <Route path="/news" element={<News />}/>
+
+
+                    
                     <Route path="/rough" element={<Rough />}/>
+
+                    <Route path="/auth" element= {<AuthForm />} /> 
                     
                   </Routes>
                 </Suspense>

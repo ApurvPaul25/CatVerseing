@@ -1,53 +1,85 @@
 import React from 'react'
+import "../components/Footer.css"
+import { FaTwitter, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { NavLink } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className='fixed bottom-0 left-0 w-full bg-zinc-900 text-white py-4'>
+    <footer>
         <div className="footer-top">
             <div className="container grid grid-four-column">
             <div className="logo-footer">
-                <img src="" alt="logo" />
-                <p>Description</p>
+                <h1 style={{ color: "teal" }}>&lt;/Apurva&gt;</h1>
+                <p>Cats are curious,
+                sharp-witted creatures that move
+                like they own the world—and honestly,
+                they kind of do.</p>
             </div>
 
-            <div className="footer-browser">
-                <h3>Browser</h3>
-                <p>NavLink</p>
-                <p>NavLink</p>
-                <p>NavLink</p>
-                <p>NavLink</p>
-            </div>
+            
+                <nav className="footer-nav">
+                    <NavLink to="/" className="footer-link">
+                    Home
+                    </NavLink>
+                    <NavLink to="/cats" className="footer-link">
+                    Cats
+                    </NavLink>
+                    <NavLink to="/breeds" className="footer-link">
+                    Breeds
+                    </NavLink>
+                    <NavLink to="/local" className="footer-link">
+                    Local
+                    </NavLink>
+                    <NavLink to="/wild" className="footer-link">
+                    Wild
+                    </NavLink>
+                    <NavLink to="/news" className="footer-link">
+                    News
+                    </NavLink>
+                </nav>
+            
 
             <div className="footer-services">
                 <h3>Services</h3>
-                <p>CTA</p>
-                <p>CTA</p>
-                <p>CTA</p>
-                <p>CTA</p>
+                <NavLink to="/breeds" className="footer-link">
+                    Gallery
+                </NavLink>
+                <NavLink to="/wild" className="footer-link">
+                    Wild-info
+                </NavLink>
+                <NavLink to="/news" className="footer-link">
+                    Latest
+                </NavLink>
+                <NavLink to="/cats" className="footer-link">
+                    Every-details
+                </NavLink>
             </div>
 
             <div className="contact-footer">
                 <h3>Contact Us</h3>
+                <div className='contact-input'>
                 <input type="email" placeholder='Email Us' />
                 <input type="submit" value="Subscribe" />
-                <h3>Location</h3>
+                </div>
+                <h3>Socials</h3>
                 <div className="socials">
-                    <p>Icon</p>
-                    <p>Icon</p>
-                    <p>Icon</p>
-                    <p>Icon</p>
+                    <FaTwitter />
+                    <FaInstagram />
+                    <FaGithub />
+                    <FaLinkedin />
                 </div>
             </div>
         </div>
 
             <div className="footer-bottom">
                 <hr />
-                <div className="bottom grid grid-two-column font-sm">
+                <div className="bottom">
                     <div>
                         <p>@Kayden</p>
                     </div>
-                    <div>
+                    <div className='PP'>
                         <p>Privacy Policy</p>
+                        <p>|</p>
                         <p>Terms & Conditions</p> 
                     </div>
                 </div>
