@@ -1,0 +1,111 @@
+.cats-container{
+  margin: 1rem;
+  background-color: blueviolet;
+  padding: 1rem;
+  /* border-radius: 1rem; */
+}
+
+.cat-section{
+  justify-content: space-around;
+}
+
+.cat-section h2{
+  text-align: center;
+  color: rgb(27, 16, 4);
+  transition: color 0.3s ease;
+  padding-left: 2rem;
+}
+.cat-section h2:hover{
+  color: bisque;
+}
+
+.grid {
+  display: grid;      
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));        
+}
+
+.card {
+  min-width: 2rem;
+  margin: 0.5rem;        
+  background: #f0f0f0;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  text-align: left;
+}
+
+.content{
+  color: black;
+  margin-top: 0.25rem;
+  background: rgb(188, 188, 188);
+  border-radius: 1rem;
+  padding-top: 0.4rem;
+  padding-left: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+#origin{
+  color: #f0f0f0;
+  text-align: right;
+  padding-right: 0.6rem;
+}
+
+.card img {
+  border-radius: 1rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cat-section1{
+  text-align: center;
+  color: rgb(27, 16, 4);
+  transition: color 0.3s ease;
+  padding-left: 2rem;
+  margin: 1rem;
+}
+
+.cat-section1 h2:hover{
+  color: bisque;
+}
+
+.grid1 {
+  display: grid;      
+  justify-content: space-around;
+  grid-template-rows: repeat(auto-fit, minmax(15rem, 1fr));        
+}
+
+.card1 {
+  border-radius: 1rem;
+  min-width: 2rem;
+  margin: 1rem;        
+  background: #f0f0f0;
+  padding: 2rem;
+  text-align: left;
+}
+
+.card1 h3{
+  margin: 0rem 0rem 1rem 0rem;
+}
+
+.cat-section2{
+  text-align: center;
+  color: rgb(27, 16, 4);
+  transition: color 0.3s ease;
+  padding-left: 2rem;
+  margin: 1rem;
+}
+
+.cat-section2 h2:hover{
+  color: bisque;
+}
+
+.grid2 { 
+  justify-content:space-around;
+  grid-template-rows: repeat(auto-fit, minmax(30rem, 1fr));        
+}
+
+.card2 {
+  padding: 1rem;
+  background: #f0f0f0;
+  border-radius: 1rem;
+  margin: 1rem;
+  align-items: center;
+}
